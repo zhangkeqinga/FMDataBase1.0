@@ -1,0 +1,45 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+
+#import "ASIHTTPRequest.h"
+#import "SBJson.h"
+
+#define JIAFENG_DB                    @"GFLife.db"
+
+#define SYSTEM_CONF_FILE               SYSTEM_CONF@".plist"
+#define SYSTEM_CONF                    @"system_conf"
+
+#define headUrl @"http://58.32.246.78:8380"     //生产
+#define newUrl  [NSString stringWithFormat:@"%@/android/getNewRecords?",headUrl]
+#define test_url       @"http://occ.yto56.com.cn" //新闻图片路径
+
+
+
+//
+#ifdef DEBUG
+#define DLog(...) NSLog(__VA_ARGS__)
+#define DMethod() NSLog(@"%s", __func__)
+#else
+#define DLog(...)
+#define DMethod()
+#endif
+
+
+
+
+
+#endif

@@ -1,0 +1,699 @@
+{\rtf1\ansi\ansicpg936\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Menlo-Bold;
+\f3\fnil\fcharset134 STHeitiSC-Light;\f4\fmodern\fcharset0 CourierNewPSMT;\f5\fnil\fcharset0 SimSun;
+}
+{\colortbl;\red255\green255\blue255;\red77\green77\blue77;\red24\green52\blue255;\red19\green160\blue75;
+\red242\green242\blue242;\red107\green0\blue109;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww15560\viewh8720\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf2 \
+\
+drop 
+\b \cf3 table
+\b0 \cf2  
+\b \cf3 if
+\b0 \cf2  
+\b \cf3 exists
+\b0 \cf2  NewsModle;\
+CREATE TABLE NewsModle (\
+  i_id int,\
+  createTime varchar(255) DEFAULT('0'),\
+  imageUrl varchar(255) DEFAULT('0'),\
+  msgTitle varchar(255) DEFAULT('0'),\
+  sendMsgType varchar(255) DEFAULT('0'),\
+  fileUrl varchar(255) DEFAULT('0'),\
+  imageData text(10000) DEFAULT('0')\
+);\
+\
+\
+\
+drop 
+\b \cf3 table
+\b0 \cf2  
+\b \cf3 if
+\b0 \cf2  
+\b \cf3 exists
+\b0 \cf2  dt_user;\
+create 
+\b \cf3 table
+\b0 \cf2  dt_user\
+(\
+  i_id                       int ,\
+  user_name          
+\b \cf4  varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,\
+  user_age             
+\b \cf4  varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0',\
+  user_sex              
+\b \cf4  varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  false,\
+  
+\f1\fs22 \CocoaLigature0 user_birthday
+\f0\fs24 \CocoaLigature1    
+\b \cf4  varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  false,\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf2 \CocoaLigature0  user_photo    
+\f2\b \cf4  \CocoaLigature1 varchar
+\f0\b0\fs24 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  false,\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf2   user_account       
+\b \cf4  varchar
+\b0 \cf2 (255)  
+\b \cf3 default
+\b0 \cf2  'false' ,\
+  user_password    
+\b \cf4  varchar
+\b0 \cf2 (255)  
+\b \cf3 default
+\b0 \cf2  'false',\
+  user_password    
+\b \cf4  varchar
+\b0 \cf2 (255)  
+\b \cf3 default
+\b0 \cf2  'false',\
+\
+  user_phone_number
+\b \cf4  varchar
+\b0 \cf2 (255)  
+\b \cf3 default
+\b0 \cf2  'false'\
+ \
+)\
+;\
+\
+insert 
+\b \cf3 into
+\b0 \cf2  dt_user 
+\b \cf3 values
+\b0 \cf2  ( 1 ,'1','boy1',   '23', 1,'1990-10-10', '1'  , '1', '1');\
+insert 
+\b \cf3 into
+\b0 \cf2  dt_user 
+\b \cf3 values
+\b0 \cf2  ( 2 ,'2','boy2',   '23', 1,'1990-10-10', '1'  , '1', '1');\
+insert 
+\b \cf3 into
+\b0 \cf2  dt_user 
+\b \cf3 values
+\b0 \cf2  ( 3 ,'3','boy3',   '23', 1,'1990-10-10', '1'  , '1', '1');\
+insert 
+\b \cf3 into
+\b0 \cf2  dt_user 
+\b \cf3 values
+\b0 \cf2  ( 4 ,'4','boy4',   '23', 1,'1990-10-10', '1'  , '1', '1');\
+insert 
+\b \cf3 into
+\b0 \cf2  dt_user 
+\b \cf3 values
+\b0 \cf2  ( 5 ,'5','boy5',   '23', 1,'1990-10-10', '1'  , '1', '1');\
+\
+--comment 
+\b \cf3 on
+\b0 \cf2  
+\b \cf3 table
+\b0 \cf2  dt_user\
+  --is '
+\f3 \'d3\'c3\'bb\'a7\'b1\'ed
+\f0 ';\
+--comment 
+\b \cf3 on
+\b0 \cf2  
+\b \cf3 column
+\b0 \cf2  i_id\
+  --is '
+\f3 \'d3\'c3\'bb\'a7
+\f0 id';\
+\
+--comment 
+\b \cf3 on
+\b0 \cf2  
+\b \cf3 column
+\b0 \cf2  user_name\
+  --is '
+\f3 \'d3\'c3\'bb\'a7\'d0\'d5\'c3\'fb
+\f0 ';\
+--comment 
+\b \cf3 on
+\b0 \cf2  
+\b \cf3 column
+\b0 \cf2  user_age\
+  --is '
+\f3 \'d3\'c3\'bb\'a7\'c4\'ea\'c1\'e4
+\f0 ';\
+--comment 
+\b \cf3 on
+\b0 \cf2  
+\b \cf3 column
+\b0 \cf2  user_sex\
+  --is '
+\f3 \'d3\'c3\'bb\'a7\'d0\'d4\'b1\'f0
+\f0 (BOOL 0 
+\f3 \'c5\'ae\'c8\'cb
+\f0  1 
+\f3 \'c4\'d0\'c8\'cb
+\f0 )';\
+\
+--comment 
+\b \cf3 on
+\b0 \cf2  
+\b \cf3 column
+\b0 \cf2  user_brithday\
+  --is '
+\f3 \'d3\'c3\'bb\'a7\'b3\'f6\'c9\'fa\'c8\'d5\'c6\'da
+\f0 ';\
+\
+--comment 
+\b \cf3 on
+\b0 \cf2  
+\b \cf3 column
+\b0 \cf2  
+\f1\fs22 \CocoaLigature0 user_photo
+\f0\fs24 \CocoaLigature1 \
+  --is '
+\f3 \'d3\'c3\'bb\'a7\'cd\'b7\'cf\'f1
+\f0 ';\
+\
+--comment 
+\b \cf3 on
+\b0 \cf2  
+\b \cf3 column
+\b0 \cf2  user_account\
+  --is '
+\f3 \'d3\'c3\'bb\'a7\'b5\'c4\'d5\'ca\'ba\'c5
+\f0 ';\
+\
+--comment 
+\b \cf3 on
+\b0 \cf2  
+\b \cf3 column
+\b0 \cf2  user_password\
+  --is '
+\f3 \'d3\'c3\'bb\'a7\'b5\'c4\'c3\'dc\'c2\'eb
+\f0 ';\
+\
+--comment 
+\b \cf3 on
+\b0 \cf2  
+\b \cf3 column
+\b0 \cf2  user_phone_number\
+  --is '
+\f3 \'d3\'c3\'bb\'a7\'b5\'c4\'b5\'e7\'bb\'b0
+\f0 ';\
+\
+\
+\
+\
+\
+\
+drop 
+\b \cf3 table
+\b0 \cf2  
+\b \cf3 if
+\b0 \cf2  
+\b \cf3 exists
+\b0 \cf2  dt_
+\f3 re
+\f0 view;\
+create 
+\b \cf3 table
+\b0 \cf2  dt_
+\f3 re
+\f0 view\
+(\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f1\fs22 \cf0 \CocoaLigature0 i_id                  
+\f3 int
+\f0\fs24 \cf2 \CocoaLigature1  
+\f4 \cf0 \cb5 identity(\cf6 1\cf0 ,\cf6 1\cf0 ) primary key
+\f0 \cf2 \cb1 ,\cf0 \
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf0 \CocoaLigature0 review_title          
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,
+\f1\fs22 \cf0 \CocoaLigature0        
+\f0\fs24 \CocoaLigature1 \
+
+\f1\fs22 \CocoaLigature0 review_info           
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,
+\f1\fs22 \cf0 \CocoaLigature0        
+\f0\fs24 \CocoaLigature1 \
+
+\f1\fs22 \CocoaLigature0 review_picture        
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,
+\f1\fs22 \cf0 \CocoaLigature0        
+\f0\fs24 \CocoaLigature1 \
+
+\f1\fs22 \CocoaLigature0 review_time           
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,
+\f1\fs22 \cf0 \CocoaLigature0           
+\f0\fs24 \CocoaLigature1 \
+
+\f1\fs22 \CocoaLigature0 review_collectionnum  
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,
+\f1\fs22 \cf0 \CocoaLigature0   
+\f0\fs24 \CocoaLigature1 \
+
+\f1\fs22 \CocoaLigature0 review_transmitnum    
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,
+\f1\fs22 \cf0 \CocoaLigature0   
+\f0\fs24 \CocoaLigature1 \
+
+\f1\fs22 \CocoaLigature0 review_address        
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' 
+\f1\fs22 \cf0 \CocoaLigature0   \
+    
+\f0\fs24 \CocoaLigature1  \cf2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf2 )\
+;\
+\
+insert 
+\b \cf3 into
+\b0 \cf2  dt_
+\f3 re
+\f0 view 
+\b \cf3 values
+\b0 \cf2  (1,'title1','information1',   'picture1', 'time1','collectionnum1', 'transmitnum1'  , 'address1');\
+insert 
+\b \cf3 into
+\b0 \cf2  dt_
+\f3 re
+\f0 view 
+\b \cf3 values
+\b0 \cf2  (1,'title2','information2',   'picture2', 'time'2,'collectionnum2', 'transmitnum2'  , 'address2');\
+insert 
+\b \cf3 into
+\b0 \cf2  dt_
+\f3 re
+\f0 view 
+\b \cf3 values
+\b0 \cf2  (1,'title3','information3',   'picture3', 'time3','collectionnum3', 'transmitnum3'  , 'address3');\
+\
+--comment 
+\b \cf3 on
+\b0 \cf2  
+\b \cf3 table
+\b0 \cf2  dt_
+\f3 re
+\f0 view\
+  --is '
+\f3 \'d3\'c3\'bb\'a7\'c6\'c0\'c2\'db\'b1\'ed
+\f0 ';\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf0 \CocoaLigature0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf2 \CocoaLigature1 drop 
+\b \cf3 table
+\b0 \cf2  
+\b \cf3 if
+\b0 \cf2  
+\b \cf3 exists
+\b0 \cf2  dt_
+\f3 re
+\f0 view_play;\
+create 
+\b \cf3 table
+\b0 \cf2  dt_
+\f3 re
+\f0 view_play\
+(\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f1\fs22 \cf0 \CocoaLigature0 i_id                         
+\f3 int
+\f0\fs24 \cf2 \CocoaLigature1  
+\f4 \cf0 \cb5 identity(\cf6 1\cf0 ,\cf6 1\cf0 ) primary key
+\f0 \cf2 \cb1 ,\cf0 \
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf0 \CocoaLigature0 review_id                    
+\f3 int  
+\f0\b\fs24 \cf3 \CocoaLigature1 not null
+\b0 \cf2 ,\cf0 \
+
+\f1\fs22 \CocoaLigature0 review_replay_title          
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0',\cf0 \
+
+\f1\fs22 \CocoaLigature0 review_replay_info           
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 not null 
+\b0 \cf2 ,\cf0 \
+
+\f1\fs22 \CocoaLigature0 review_replay_picture        
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,\cf0 \
+
+\f1\fs22 \CocoaLigature0 review_replay_time           
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,\cf0 \
+
+\f1\fs22 \CocoaLigature0 review_replay_collectionnum  
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,\cf0 \
+
+\f1\fs22 \CocoaLigature0 review_replay_transmitnum    
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,\cf0 \
+
+\f1\fs22 \CocoaLigature0 review_replay_address        
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' 
+\f1\fs22 \cf0 \CocoaLigature0 \
+    
+\f0\fs24 \CocoaLigature1  \cf2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf2 )\
+;\
+\
+insert 
+\b \cf3 into
+\b0 \cf2  dt_
+\f3 re
+\f0 view_play 
+\b \cf3 values
+\b0 \cf2  (1,1,'retitle1','reinformation1',   'repicture1', 'retime1','recollectionnum1', 'retransmitnum1'  , 'readdress1');\
+\
+--comment 
+\b \cf3 on
+\b0 \cf2  
+\b \cf3 table
+\b0 \cf2  dt_
+\f3 re
+\f0 view\
+  --is '
+\f3 \'d3\'c3\'bb\'a7\'c6\'c0\'c2\'db\'bb\'d8\'b8\'b4\'b1\'ed
+\f0 ';\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f1\fs22 \cf0 \CocoaLigature0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab529\pardirnatural
+
+\f0\fs24 \cf2 \CocoaLigature1 drop 
+\b \cf3 table
+\b0 \cf2  
+\b \cf3 if
+\b0 \cf2  
+\b \cf3 exists
+\b0 \cf2  dt_
+\f3 friendly
+\f0 ;\
+create 
+\b \cf3 table
+\b0 \cf2  dt_
+\f3 friendly
+\f0 \
+(\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f1\fs22 \cf0 \CocoaLigature0 i_id              
+\f3 int
+\f0\fs24 \cf2 \CocoaLigature1  
+\f4 \cf0 \cb5 identity(\cf6 1\cf0 ,\cf6 1\cf0 ) primary key
+\f0 \cf2 \cb1 ,\cf0 \
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf0 \CocoaLigature0 user_id           
+\f3 int  
+\f0\b\fs24 \cf3 \CocoaLigature1 not null
+\b0 \cf2 ,\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f5 \cf0 friendly_user_id    
+\f3\fs22 \CocoaLigature0 int  
+\f0\b\fs24 \cf3 \CocoaLigature1 not null
+\b0 \cf2 ,\cf0 \
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf0 \CocoaLigature0 friendly_type     
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,\cf0 \
+
+\f1\fs22 \CocoaLigature0 friendly_addtime  
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' 
+\f1\fs22 \cf0 \CocoaLigature0 \
+
+\f0\fs24 \CocoaLigature1 )\cf2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab529\pardirnatural
+\cf2 ;\
+\
+insert 
+\b \cf3 into
+\b0 \cf2  dt_
+\f3 friendly
+\f0  
+\b \cf3 values
+\b0 \cf2  (1,1,2,'friendlytype1','friendly_addtime1' );\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf2 --comment 
+\b \cf3 on
+\b0 \cf2  
+\b \cf3 table
+\b0 \cf2  dt_
+\f3 friendly
+\f0 \
+  --is '
+\f3 \'d3\'c3\'bb\'a7\'ba\'c3\'d3\'d1\'c1\'d0\'b1\'ed
+\f0 ';\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab529\pardirnatural
+\cf2 \
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf2 drop 
+\b \cf3 table
+\b0 \cf2  
+\b \cf3 if
+\b0 \cf2  
+\b \cf3 exists
+\b0 \cf2  dt_
+\f3 food
+\f0 ;\
+create 
+\b \cf3 table
+\b0 \cf2  dt_
+\f3 food
+\f0 \
+(\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f1\fs22 \cf0 \CocoaLigature0 i_id              
+\f3 int
+\f0\fs24 \cf2 \CocoaLigature1  
+\f4 \cf0 \cb5 identity(\cf6 1\cf0 ,\cf6 1\cf0 ) primary key
+\f0 \cf2 \cb1 ,\cf0 \
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf0 \CocoaLigature0 food_name         
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,\cf0 \
+
+\f1\fs22 \CocoaLigature0 food_type         
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,\
+
+\f1\fs22 \cf0 \CocoaLigature0 food_imagename    
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,\cf0 \
+
+\f1\fs22 \CocoaLigature0 food_description  
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,\cf0 \
+
+\f1\fs22 \CocoaLigature0 food_all_weight   
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' 
+\f1\fs22 \cf0 \CocoaLigature0 \
+    
+\f0\fs24 \CocoaLigature1  \cf2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf2 )\
+;\
+\
+insert 
+\b \cf3 into
+\b0 \cf2  dt_
+\f3 food
+\f0  
+\b \cf3 values
+\b0 \cf2  (1,'
+\f3 name
+\f0 ','type',   'image', 'description','all weight' );\
+\
+--comment 
+\b \cf3 on
+\b0 \cf2  
+\b \cf3 table
+\b0 \cf2  dt_
+\f3 food
+\f0 \
+  --is '
+\f3 \'ca\'b3\'ce\'ef\'b1\'ed
+\f0 ';\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab529\pardirnatural
+\cf2 \
+drop 
+\b \cf3 table
+\b0 \cf2  
+\b \cf3 if
+\b0 \cf2  
+\b \cf3 exists
+\b0 \cf2  dt_
+\f3 life_note
+\f0 ;\
+create 
+\b \cf3 table
+\b0 \cf2  dt_
+\f3 life_note
+\f0 \
+(\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f1\fs22 \cf0 \CocoaLigature0 i_id            
+\f3 int
+\f0\fs24 \cf2 \CocoaLigature1  
+\f4 \cf0 \cb5 identity(\cf6 1\cf0 ,\cf6 1\cf0 ) primary key
+\f0 \cf2 \cb1 ,\cf0 \
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf0 \CocoaLigature0 user_id         
+\f3 int  
+\f0\b\fs24 \cf3 \CocoaLigature1 not null
+\b0 \cf2 ,\cf0 \
+
+\f1\fs22 \CocoaLigature0 user_time       
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,\cf0 \
+
+\f1\fs22 \CocoaLigature0 user_breakfast  
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,\cf0 \
+
+\f1\fs22 \CocoaLigature0 user_lunch      
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,\
+
+\f1\fs22 \cf0 \CocoaLigature0 user_dinner     
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' ,\cf0 \
+
+\f1\fs22 \CocoaLigature0 user_extrameal  
+\f0\b\fs24 \cf4 \CocoaLigature1 varchar
+\b0 \cf2 (255) 
+\b \cf3 default
+\b0 \cf2  '0' 
+\f1\fs22 \cf0 \CocoaLigature0     
+\f0\fs24 \CocoaLigature1  \cf2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab529\pardirnatural
+\cf2 )\
+;\
+\
+insert 
+\b \cf3 into
+\b0 \cf2  dt_
+\f3 life_note
+\f0  
+\b \cf3 values
+\b0 \cf2  (1,1,'
+\f3 time
+\f0 ','breakfast',   'lunch', \'91di\'92nner, 'extra meal' );\
+\
+--comment 
+\b \cf3 on
+\b0 \cf2  
+\b \cf3 table
+\b0 \cf2  dt_
+\f3 life_note
+\f0 \
+  --is '
+\f3 \'c3\'bf\'c8\'d5\'b2\'cd\'d2\'fb\'b1\'ed
+\f0 ';\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf2 \
+}
